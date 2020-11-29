@@ -17,7 +17,7 @@ abstract class BaseController
     public function store(Request $request)
     {
         return response()
-            ->json($this->class::create(['nome' => $request->nome]), 201);
+            ->json($this->class::create($request->all()), 201);
     }
 
     public function show(int $id)
