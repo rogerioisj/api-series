@@ -27,8 +27,6 @@ abstract class BaseController
             return response()
                 ->json($resource, 200);
         } catch (Exception $e) {
-            //return response()
-            //  ->json(['error' => $e->getMessage()], $e->getStatusCode());
             return $e;
         }
     }
